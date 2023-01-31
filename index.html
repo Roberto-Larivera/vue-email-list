@@ -10,9 +10,18 @@
 </head>
 <body>
     <div id="app">
+        <h1>Mails</h1>
         <ul>
-            <li v-for="(item, index) in mails">{{item}} </li>
+            <li v-for="(item, index) in mails">{{index + ' ' +item}} </li>
         </ul>
+        <h2>MailsTwo</h2>
+        <ul>
+            <li v-for="(item, index) in mails" v-if="(mails.length == quantity)">{{item}} </li>
+        </ul>
+        <!-- <h2>MailsThree</h2>
+        <ul>
+            <li v-for="(item, index) in mailsThree"> {{item}} </li>
+        </ul> -->
     </div>
     <script type="text/javascript" src="js/scripts.js"></script>
 </body>
