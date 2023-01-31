@@ -7,11 +7,13 @@
     <title>Vue Email List</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
 </head>
 <body>
     <div id="app">
-
+        <ul>
+            <li v-for="(item, index) in mails">{{item}} </li>
+        </ul>
     </div>
+    <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>
