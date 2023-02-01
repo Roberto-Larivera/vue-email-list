@@ -10,18 +10,29 @@
 </head>
 <body>
     <div id="app">
-        <h1>Mails</h1>
+        <h1>Mails - Mounted</h1>
         <ul>
             <li v-for="(item, index) in mails">{{index + ' ' +item}} </li>
         </ul>
-        <h2>MailsTwo</h2>
+        <h2>MailsTwo - Mounted v-if</h2>
         <ul>
-            <li v-for="(item, index) in mails" v-if="(mails.length == quantity)">{{item}} </li>
+            <template v-if="(mails.length == quantity)">
+                <li v-for="(item, index) in mails" >{{item}} </li>
+            </template>
         </ul>
-        <!-- <h2>MailsThree</h2>
+        <button @click="randomMails(mailsThree)">Cliccami</button>
+        <h2>MailsThree - button</h2>
         <ul>
             <li v-for="(item, index) in mailsThree"> {{item}} </li>
-        </ul> -->
+        </ul>
+        <h2>MailsFour - Created</h2>
+        <ul>
+            <li v-for="(item, index) in mailsFour"> {{item}} </li>
+        </ul>
+        <h2>MailsFour - Created if</h2>
+        <ul v-if="mailsFourVif == true">
+            <li v-for="(item, index) in mailsFour"> {{item}} </li>
+        </ul>
     </div>
     <script type="text/javascript" src="js/scripts.js"></script>
 </body>
